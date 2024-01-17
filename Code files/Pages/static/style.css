@@ -1,0 +1,112 @@
+
+body{
+    background: rgb(233, 233, 233)
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+.landing1{
+    /* This will color the heading font white. */
+    color:white;
+    /* The background of the heading element will now be black. */
+    background-color: #181661;
+    
+}
+.landing2{
+    background: white;
+    
+}
+.landing3{
+    background: white
+}
+.landing4{
+    background: white
+}
+
+.summary_title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* Change the size of your font to 60 pixels high. */
+    font-size: 50px;
+    /* This will color the heading font white. */
+    color:orangered;
+    /* The background of the heading element will now be black. */
+    background-color: white;
+    /* Bold the text. */
+    font-weight: bold;
+   
+  }
+.comparison_head{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* Change the size of your font to 60 pixels high. */
+    font-size: 50px;
+    /* This will color the heading font white. */
+    color: rgb(13, 182, 182);
+    /* The background of the heading element will now be black. */
+    background-color: white;
+    /* Bold the text. */
+    font-weight: bold;
+    
+}
+.visualizattion_title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    /* Change the size of your font to 60 pixels high. */
+    font-size: 40px;
+    /* This will color the heading font white. */
+    color: rgb(13, 182, 182);
+    /* Align the text to the center of its enclosing element (e.g. div). */
+    /* text-align: left; */
+    /* The background of the heading element will now be black. */
+    background-color: white;
+    /* Bold the text. */
+    font-weight: bold;
+    /* margin-top: 40px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right:50px;
+} */}
+.summary {
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+    /* Bold the text. */
+    font-weight: bold;
+    margin-top: 15px
+  }
+
+ul {
+    margin: 1;
+    padding: 0;
+    list-style-type: none;
+   }
+
+li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+li:hover{
+    background-color: #130e8b;
+    
+}
+.navbar-brand{
+    background:white;
+    font-size: 20px;
+    font-weight: bold
+}
+.navbar{
+    background-color:orangered;
+}
+.section1{
+    background-color: #181661
+}
+.searchb{
+    text-align: center;
+}

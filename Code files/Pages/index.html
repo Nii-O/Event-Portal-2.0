@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Project</title>
+
+
+   <!-- Bring in our bootstrap stylesheet -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+
+</head>
+
+<body>
+    
+  <header>  
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-brand">
+      <div class="container-fluid">
+          <a class="navbar-brand" target="_blank" href="https://www.syracuse.edu/?utm_campaign=image-f23&utm_medium=search&utm_source=google&utm_content=brand-general&utm_term=short-ad&gad_source=1&gclid=EAIaIQobChMIsZbkh8vpggMVxh6tBh1DzgPjEAAYASAAEgJHwfD_BwE">
+              <img src="https://www.syracuse.com/resizer/PSZQZOY-CIYX60oy1jYQpPRljrs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.syracuse.com/home/syr-media/width2048/img/borkowski/photo/beastoftheeastjpg-71a281d426e952bf.jpg" height="40" alt="" loading="lazy" style="margin-top: -3px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://www.syracuse.edu/life/groups-activities/student-organizations/">Student Organizations</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://www.syracuse.edu/life/campus-highlights/schine-and-goldstein-student-centers/">Student Centers</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="https://www.syracuse.edu/about/map/">Campus Map</a>
+            </li>
+            
+            
+          </ul>
+        
+        </div>
+      </div>
+    </nav>
+
+    <!--Jumbotron-->
+    <div id="'intro" class="'p-5 text-center landing1">
+      <h1 class="mb-3 h2">Syracuse University Events Portal</h1>
+      <p class="mb-3">Your first stop to get involved on campus</p>
+    </div>
+    
+
+    <!-- <h2>Search Database Table</h2>
+
+      <form action="/search" method="get">
+          <label for="search">Search:</label>
+          <input type="text" id="search" name="search">
+          <input type="submit" value="Search">
+      </form> -->
+
+
+  </header>
+  
+  
+  <main class="'my-5 section1">
+    <div class="container">
+      <section class="row">
+        
+        <!--First column-->
+          <div class="col-md-9 mb-4">
+            <div class="landing2">
+              <h1 class="summary_title">Whats happening around Campus?</h1>
+              <hr>
+
+                <div>
+                  <!--First image-->
+                  <div class="summary_page">
+                    <img src="https://www.syracuse.edu/assets/original_images/promenade-dusk_08-02-202117-23-35.jpg" class="img-fluid" ALIGN="left" />
+                    <p class="summary">Explore whats happening on and around campus!!</p> 
+
+                  </div>
+                </div> 
+
+                <div class="col-md-12 mb-4">
+                  <h5>A brand new community awaits</h5>
+                  <p>
+                    Welcome to the Syracuse University events portal where we bring to you all events and functions happening on and around the Syracuse
+                    community.
+                  </p>
+                  <div class="searchb">
+                    <p >
+                       <h2>Search Database Table</h2>
+  
+                        <form action="/search" method="get">
+                            <label for="search">Search:</label>
+                            <input type="text" id="search" name="search">
+                            <input type="submit" value="Search">
+                        </form>
+                    </p>
+                    </div>
+
+                </div>
+
+                <div>
+                  <!-- Use a table to display the data -->
+                 
+                  <ul>
+                    <!-- Loop through the data and generate table rows -->
+                    {% for event in data %}
+                    <div class="col-md-12 mb-4">
+                        <li>
+                            <div class="col-md-12 mb-4">
+                              
+                                <h2>{{ event[0] }}</h2>
+                                <h3>{{ event[1] }}</h3>
+                                <h4>{{ event[2].strftime('%m-%d-%Y') }}</h4>
+                                <h4>{{ event[3] }}</h4>
+                                <!-- Add more cells for other properties as needed -->
+                                
+                            </div>  
+                        </li>
+                      {% endfor %}
+                    </div>
+                     <!--</tbody> -->
+                  </ul>
+
+              </div>
+                
+            </div> 
+          </div>
+
+        <!--Second Column-->
+        <div class="col-md-3 mb-4 landing3">
+          <!--Section: Sidebar-->
+          <section class="sticky-top" style="top: 80px;">
+            <!--Section: Ad-->
+            <section class="text-center border-bottom pb-4 mb-4">
+              <div class="bg-image hover-overlay ripple mb-4">
+                <img
+                  src="https://calendar.syracuse.edu/wp-content/uploads/RS614999_1SU_3196-lpr-1100x732.jpg"
+                  class="img-fluid" />
+                <a href="https://mdbootstrap.com/docs/standard/" target="_blank">
+                  <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                </a>
+              </div>
+              <h5>Campus Store</h5>
+
+              <p>
+                Get Ready For This Weeks In-store Pop-up!
+              </p>
+            
+            </section>
+            <!--Section: Ad-->
+
+            <!--Section: Video-->
+            <section class="text-center">
+              <h5 class="mb-4">Learn the newest Bootstrap 5</h5>
+
+              <div class="embed-responsive embed-responsive-16by9 shadow-4-strong">
+                <iframe class="embed-responsive-item rounded" src="https://www.youtube.com/embed/3yEjccuzOU8"
+                  allowfullscreen></iframe>
+              </div>
+            </section>
+            <!--Section: Video-->
+          </section>
+        </div>
+
+
+      </section>
+    </div>
+  </main>
+  
+
+
+</body>
+
+
+
+
+<!--<ul class="table table-bordered">
+   <thead>
+      <tr>
+          <th>Event Name</th>
+          <th>Event Description</th>
+          <th>Date</th>
+          <th>Location</th>
+           Add more headers for other properties as needed 
+      </tr>
+  </thead> 
+  tbody> -->
+
+
+  <!-- <ul>
+     Loop through the data and generate table rows 
+    {% for event in data %}
+    <li>
+        <h2>{{ event[0] }}</h2>
+        <h3>{{ event[1] }}</h3>
+        <h4>{{ event[2].strftime('%m-%d-%Y') }}</h4>
+        <h4>{{ event[3] }}</h4>
+         Add more cells for other properties as needed 
+    </li>
+    {% endfor %}
+</tbody> 
+  
+</ul> -->
+
+
+
+<!-- <img src=”IMAGE URL” align=”left” style=”margin: 0px 10px 0px 0px;” /><p>Your text goes here.</p> -->
+</html>
