@@ -42,7 +42,7 @@ Integrating Intelligent Recommendations: While we aimed to incorporate intellige
 
 Despite these challenges, our project demonstrates the effective utilization of cloud services to streamline event management and enhance campus-wide communication at Syracuse University.
 
-
+--
 
 
 Below is a link to a demo showing how we used Azure app services to host our final webpage and what the final web page looks like.
