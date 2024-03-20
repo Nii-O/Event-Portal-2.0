@@ -14,19 +14,19 @@ Intelligent Recommendations (Machine Learning): We explore the possibility of in
 ## Cloud Architecture
 Our cloud architecture consists of the following components:
 
-### Azure SQL Server: 
+#### Azure SQL Server: 
 We utilize a standard SQL server hosted on Azure with default configurations to manage our SQL database securely.
 
-### SQL Database: 
+#### SQL Database: 
 The SQL database is created on Azure as a general-purpose, serverless database with ample storage capacity. We establish connections and manage the database using Azure Data Studio.
 
-### Python Code: 
+#### Python Code: 
 We develop Python scripts to interact with the SQL database, retrieve event data, and serve it to the HTML landing page using Flask, a lightweight web application framework.
 
-## HTML Code: 
+#### HTML Code: 
 Our HTML code defines the structure and layout of the landing page, providing users with an intuitive interface to explore and interact with event listings.
 
-### App Services: 
+#### App Services: 
 Azure App Services hosts our web application, providing scalable and reliable hosting infrastructure. We leverage Visual Studio Code for streamlined deployment of our web application to Azure App Services.
 
 ## Issues Encountered
